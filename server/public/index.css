@@ -1,0 +1,229 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #272727;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.easter-egg-main {
+  background-color: #272727;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid green;
+}
+
+.dialog-scene {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.easter-egg-text {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.dialog-box {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 2rem;
+}
+
+.long-history {
+  position: absolute;
+
+  width: 90%;
+  height: 75%;
+  padding: 2rem;
+  top: 20%;
+  left: 4%;
+  white-space: normal;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.dialog-content {
+  position: absolute;
+
+  width: 90%;
+  height: 80%;
+  padding: 2rem;
+  top: 20%;
+  left: 4%;
+  overflow: hidden;
+  white-space: normal;
+}
+.dialog-phrase-animation {
+  width: fit-content;
+  max-width: 500px;
+  margin-right: 2rem;
+  height: 28px;
+  left: 0;
+  overflow: hidden;
+  font-weight: 800;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none;
+}
+
+.border-green {
+  border-right: 0.15em solid green;
+}
+
+.typing {
+  animation: typing 0.5s steps(50) 0.5s 1 normal both,
+    blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 63ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.transition-from-left {
+  animation: transition-from-left 0.5s ease-in-out;
+}
+
+.transition-from-right {
+  animation: transition-from-right 0.5s ease-in-out;
+}
+
+@keyframes transition-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes transition-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.enter-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #272727;
+}
+
+.enter-btn {
+  width: 200px;
+  height: 50px;
+  background-color: #272727;
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.history {
+  height: auto;
+  display: block;
+  width: 100%;
+  animation: scroll-text-up 120s linear infinite;
+}
+
+@keyframes scroll-text-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-1500%);
+  }
+}
+
+.submit-btn {
+  width: 400px;
+  height: 50px;
+  background-color: #272727;
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: green;
+  color: #272727;
+}
