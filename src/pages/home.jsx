@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { useSnapshot } from "valtio";
+import { threejs } from "../assets";
 import {
   headContainerAnimation,
   headContentAnimation,
@@ -9,7 +10,6 @@ import {
   slideAnimation,
 } from "../config/motion";
 import state from "../store";
-
 const Home = () => {
   const snap = useSnapshot(state);
   return (
@@ -18,7 +18,7 @@ const Home = () => {
         <motion.section className="home" {...slideAnimation("left")}>
           <motion.header {...slideAnimation("down")} {...rotate360}>
             <img
-              src="./threejs.png"
+              src={threejs}
               alt="three js logo"
               className="w-8 h-8 object-contain"
             />
